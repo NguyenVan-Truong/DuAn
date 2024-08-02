@@ -1,0 +1,76 @@
+@layer tailwind-base, antd;
+
+@layer tailwind-base {
+	@tailwind base;
+}
+@tailwind components;
+@tailwind utilities;
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.navbar3 {
+	background-color: white;
+	color: #2b6988;
+	height: 50px;
+	display: flex;
+	justify-content: flex-end;
+	overflow: hidden;
+	position: relative;
+	border-right: 100px solid white;
+	border-left: 100px solid white;
+	font-size: 25px;
+}
+
+.navbar4 {
+	align-items: center;
+}
+
+.running-text {
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	right: 100%;
+	animation: runText 25s linear infinite;
+	/*width: 100%;*/
+}
+
+@keyframes runText {
+	from {
+		right: -100%;
+	}
+
+	to {
+		right: 100%;
+	}
+}
+
+.nav-link.active {
+	font-weight: bold; /* Độ đậm chữ */
+	text-decoration: underline; /* Gạch chân */
+	border-bottom: 2px solid rgb(99, 99, 99); /* Border xung quanh liên kết */
+	border-radius: 5px; /* Bo tròn góc của border */
+}
+
+.dropdown-item:hover {
+	background-color: #90c8ff; /* Màu nền khi hover */
+	color: black;
+	text-decoration: none;
+}
+
+.card {
+	transition: transform 0.2s;
+}
+
+.card:hover {
+	transform: scale(1.05);
+}
+.text-truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.text-center {
+	text-align: center;
+}
